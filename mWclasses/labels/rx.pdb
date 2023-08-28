@@ -24,30 +24,3 @@ HETATM   23  C25 RX1 A   1      -1.426  -2.589  -1.039  1.00 20.00      A    C
 HETATM   24  C26 RX1 A   1       0.559  -2.918  -2.519  1.00 20.00      A    C  
 HETATM   25  N27 RX1 A   1      -1.041  -1.150  -2.955  1.00 20.00      A    N  
 HETATM   26  O28 RX1 A   1      -1.660  -1.603  -3.843  1.00 20.00      A    O  
-CONECT    1    2
-CONECT    2    1    4    6
-CONECT    3    7   16   17
-CONECT    4    2    5
-CONECT    5    4
-CONECT    6    2    8
-CONECT    7    3    9
-CONECT    8    6   10
-CONECT    9    7   11
-CONECT   10    8   12
-CONECT   11    9   13
-CONECT   12   10   21
-CONECT   13   11   20
-CONECT   14   15
-CONECT   15   14   19   20   25
-CONECT   16    3   18
-CONECT   17    3
-CONECT   18   16
-CONECT   19   15
-CONECT   20   13   15   21
-CONECT   21   12   20   22
-CONECT   22   21   23   24   25
-CONECT   23   22
-CONECT   24   22
-CONECT   25   15   22   26
-CONECT   26   25
-END

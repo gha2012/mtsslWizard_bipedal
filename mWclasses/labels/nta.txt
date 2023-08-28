@@ -9,6 +9,7 @@ rotationString=NxOxCxCA-CB-CGxCD2xNE2!!+Cu1!!!!!!!!!!!!!+NE22xCD22xCG2!!-CB2-CA2
 spinLocation=Cu1
 highlight=Cu1
 atomsForSuperposition=CA,N,C,CB
+atomsForSuperposition2=CA2,N2,C2,CB2
 defaultVdw=loose
 numberToFind=10240,2000000,50
 numberOfTries=100000,100000,500
