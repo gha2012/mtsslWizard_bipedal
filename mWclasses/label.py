@@ -24,6 +24,11 @@ class Label:
 		self.spinLocation = data["spinLocation"]
 		self.highlight = data["highlight"]
 		self.atomsForSuperposition = data["atomsForSuperposition"].split(",")
+		try:
+			#This is for the anchor2 site of bipedal labels.
+			self.atomsForSuperposition2 = data["atomsForSuperposition2"].split(",")
+		except:
+			print("No atomsForSuperposition2 found in label description. Monopedal label?")
 		self.defaultVdw = data["defaultVdw"]
 		self.numberToFind = self.extractThoroughness(data["numberToFind"])
 		self.numberOfTries = self.extractThoroughness(data["numberOfTries"])
@@ -184,7 +189,7 @@ class Label:
 		#multiply by Boolean array to make all constant distances zero
 		dist=changingDistances*dist
 		#check for internal clashes
-		internalClashes=dist[numpy.nonzero((dist < 3.0) & (dist > 0))]
+		internalClashes=dist[numpy.nonzero((dist < 2.5) & (dist > 0))]
 		#print internalClashes
 		if len(internalClashes) > 0:
 			return True

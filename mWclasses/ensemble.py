@@ -71,13 +71,11 @@ class Ensemble:
 	def tournament(self, polish = False):
 		if polish:
 			return self.rotamers[0]
-		tournamentSize = int(len(self.rotamers)*0.005)
-		# print("tournamentSize: %i" %tournamentSize)
+		tournamentSize = int(len(self.rotamers) * 0.005)
 		if tournamentSize < 1:
 			tournamentSize = 1
 		participants = []
 		# select participants of this tournament
-		# participants = [rotamer for rotamer in self.rotamers if rotamer.rmsd > 0]
 		# avoid unscored rotamers to pollute tournament (rmsd=-1)
 		participants = sorted(random.sample(self.rotamers, tournamentSize), key=attrgetter('rmsd'))
 		participants = [rotamer for rotamer in participants if rotamer.rmsd > 0]
